@@ -1,0 +1,16 @@
+{
+  "name": "utils-function",
+  "version": "1.1.0",
+  "description": "function utils",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aychtang/utils-function.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aychtang/utils-function/issues"
+  },
+  "homepage": "https://github.com/aychtang/utils-function#readme"
+}
