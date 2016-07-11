@@ -1,17 +1,23 @@
 
-type unaryAny = (x : any) => any;
+// Unary any -> any.
+type uAnyAny = (x : any) => any;
 
-function invoke (f : unaryAny, o : unaryAny) : unaryAny
+// Invoke:
+// Call f on getter of o.
+function invoke (f : uAnyAny, g : uAnyAny) : uAnyAny
 {
-  return (e) => f(o(e));
+  return (o) => f(g(o));
 }
 
+// Get:
+// Get property of object at p.
 function get (p : string) : any
 {
   return (o) => o[p];
 }
 
-function comp (f : (x) => any, g : unaryAny) : unaryAny
+// Compose:
+function comp (f : uAnyAny, g : uAnyAny) : uAnyAny
 {
   return (x) => f(g(x));
 }
